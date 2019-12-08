@@ -11,6 +11,7 @@ var slid;
 var diam;
 var input;
 var nameP;
+var b;
 
 function setup() {
   p = createP("I am developing web skills");
@@ -28,6 +29,7 @@ function setup() {
   input = createInput('type your name');
   //h1 = createElement('h1', 'Waiting');
   //h1.position(400, 600)
+  b = new Ball();
 }
 
 function draw() {
@@ -44,6 +46,8 @@ function draw() {
     text("clicked!", 25, 25);
     ellipse(0, 0, 25, 25);
     rect(25, 25, 50, 20);
+    b.display();
+    b.update();
   }
   nameP.html(input.value());
   text(input.value(), 10, 20);
